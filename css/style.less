@@ -1,0 +1,405 @@
+// out: ./style.css, compress: true, sourceMap: false
+@import "normalize.css";
+@import "rem.less";
+@import "fontello.css";
+
+/* fonts */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NanumGothic-Bold.eot");
+  src: url("../font/NanumGothic-Bold.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-Bold.woff") format('woff'), url("../font/NanumGothic-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NanumGothic-Regular.eot");
+  src: url("../font/NanumGothic-Regular.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-Regular.woff") format('woff'), url("../font/NanumGothic-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/NanumGothic-Light.eot");
+  src: url("../font/NanumGothic-Light.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-Light.woff") format('woff'), url("../font/NanumGothic-Light.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../font/NanumGothic-ExtraBold.eot");
+  src: url("../font/NanumGothic-ExtraBold.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-ExtraBold.woff") format('woff'), url("../font/NanumGothic-ExtraBold.ttf") format('truetype');
+}
+
+/* basic */
+@min-width: 1000px;
+@myfont: "Nanum Gothic";
+@img-url: "../images";
+@header-height: 100px;
+@white: #fff;
+@black: #000;
+
+/* gray */
+@gray-darker: lighten(@black, 13.5%); // #222
+@gray-dark: #4a4a4a;
+@gray: #ccc;
+@gray-light: #0a84dc;
+@gray-lighter: #f7f7f7;
+
+/* blue */
+@blue-darker: #0f3e62; // #222
+@blue-dark: #1f5176; // #333
+@blue: #0055b5;
+@blue-light: #0a84dc;
+@blue-lighter: #bce1ff;
+
+/* etc color */
+@green: #199d54;
+
+/* mixin */
+
+.bold {
+  font-weight: 800;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.bottom {
+  vertical-align: bottom;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.no-list {
+  list-style:none;
+}
+
+.mapazero {
+  margin: 0;
+  padding: 0;
+}
+
+.zero {
+  font-size: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.static {
+  position: static;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  display:-webkit-flex;
+  -webkit-align-item:center;
+  -webkit-justify-content:center;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.full-position {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pagenation {
+  .inline-block;
+  .center;
+  .zero;
+  .rem(margin, 30 0 50);
+  width: 100%;
+
+  a {
+    background: @white;
+  }
+
+  a,
+  strong {
+    .inline-block;
+    .top;
+    .rem(font-size, 16);
+    border: 1px solid @gray-light;
+    .rem(width, 26);
+    .rem(height, 36);
+    .rem(line-height, 36);
+    .rem(margin, 0 1);
+    @media all and (min-width: 1200px) {
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+      margin: 0 2px;
+    }
+
+    &.jump,
+    &.move {
+      font-size: 0;
+      background: @gray-lighter;
+
+      i {
+        .rem(font-size, 16);
+        line-height: inherit;
+        font-style: normal;
+      }
+    }
+  }
+
+  .active,
+  strong {
+    background: @blue;
+    color: @white;
+    .normal;
+    border-color: transparent;
+  }
+}
+
+.freez {
+  height: 100vh;
+  .hidden;
+}
+
+
+.box-sizing (@type:border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing: @type;
+  box-sizing: @type;
+}
+
+.border-radius (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.drop-shadow (@x:0, @alpha: 0.25, @blur: 2px, @spread: 0, @y: 2px) {
+  -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.text-shadow (@string:0 1px 3px rgba(0, 0, 0, 0.25)) {
+  text-shadow: @string;
+}
+
+.opacity (@opacity) {
+  -webkit-opacity: @opacity;
+  -moz-opacity: @opacity;
+  opacity: @opacity;
+}
+
+.gradient (@startColor:#eee, @endColor: white, @ingColor: #eee) {
+  background-color: @startColor;
+  background: -webkit-linear-gradient(top, @startColor, @ingColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @ingColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @ingColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @ingColor, @endColor);
+}
+
+.gradienth (@startColor:#eee, @endColor: white, @ingColor: #eee) {
+  background-color: @startColor;
+  background: -webkit-linear-gradient(left, @startColor, @ingColor, @endColor);
+  background: -moz-linear-gradient(left, @startColor, @ingColor, @endColor);
+  background: -ms-linear-gradient(left, @startColor, @ingColor, @endColor);
+  background: -o-linear-gradient(left, @startColor, @ingColor, @endColor);
+}
+
+.container(@con-width) {
+  .relative;
+  .inline-block;
+  margin: 0 auto;
+  width: @con-width;
+  height: 100%;
+}
+
+.header-default() {
+  .inline-block;
+  .top;
+  .mapazero;
+}
+
+.blur(@blur) {
+  filter: blur(@blur);
+  -webkit-filter: blur(@blur);
+  -moz-filter: blur(@blur);
+  -o-filter: blur(@blur);
+}
+
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder(@size, @color) {
+  .runChecks() when not (isunit(@size, px)) {
+    .rem(font-size, @size);
+  }
+
+  .runChecks() when (isunit(@size, px)) {
+    font-size: @size;
+  }
+
+  &::-webkit-input-placeholder {
+    .runChecks();
+    color: @color;
+  }
+
+  &:-moz-placeholder {
+    .runChecks();
+    color: @color;
+  }
+
+  &::-ms-input-placeholder {
+    .runChecks();
+    color: @color;
+  }
+}
+
+.full-background(@background) {
+  .block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: @background;
+}
+@keyframes fade {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes heights {
+  to {
+    height:auto;
+  }
+}
+
+
+/* header */
+
+* {
+  .box-sizing;
+}
+
+input,
+select,
+textarea {
+  .border-radius(0);
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: @gray-dark;
+}
+
+/*font*/
+
+html {
+  min-width: @min-width;
+  font-size: 14px;
+}
+
+body {
+  font-family: @myfont,"Malgun Gothic", "apple sd gothic neo", sans-serif;
+  color: @gray-darker;
+}
+
+
+.sr-only {
+  .absolute !important;
+  .hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  .static;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+
+
+
+/* layout style */
