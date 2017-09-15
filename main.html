@@ -20,7 +20,9 @@
   <!-- E:skip_navi -->
   <!-- S:header -->
   <header id="header">
-    <h1>치유의숲</h1>
+    <div class="container">
+      <h1>치유의숲</h1>
+    </div>
   </header>
   <!-- E:header -->
   <!-- S:content -->
@@ -39,8 +41,8 @@
           <li><h2><a class="active" data="date">날짜별</a></h2></li>
           <li><h2><a data="plan">플랜별</a></h2></li>
         </ul>
-
-        <div class="search date active">
+        <!-- 날짜별 -->
+        <div class="tab-data search date active">
           <fieldset>
             <legend class="sr-only">가용상품조회하기</legend>
 
@@ -48,27 +50,25 @@
             <input type="text" id="datepicker1" name="datepicker1" placeholder="이용일자입력">
 
             <label class="sr-only" for="time1">시작시간대</label>
-            <select id="time1" name="time1">
-              <option>시작시간대</option>
-              <option>09:00</option>
-            </select>
+            <input type="text" id="time1" name="time1" placeholder="시작시간대 ex) 09">
 
-            <label class="sr-only" for="plantype1">플랜타입</label>
-            <select id="plantype1" name="plantype1">
-              <option>플랜타입</option>
-              <option>가족산림</option>
-            </select>
+            <p class="select-box">
+              <label class="sr-only" for="plantype1">플랜타입</label>
+              <select id="plantype1" class="plantype" name="plantype1">
+                <option>플랜타입</option>
+                <option>가족산림</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
 
             <input type="checkbox" id="availability1" name="availability1">
-            <label for="availability1">예약가능여부</label>
+            <label class="availability" for="availability1"><i class="icon-angle-down"></i>예약가능여부</label>
 
             <button>조회하기</button>
 
           </fieldset>
         </div>
-
-
-        <div class="table date active">
+        <div class="tab-data table date active">
           <h3 class="sr-only">예약가능 목록</h3>
 
           <ul class="table-info">
@@ -80,94 +80,488 @@
           </ul>
 
           <ul class="table">
-            <li>
-              <h4>2017.09.09</h4>
+            <li class="open">
+              <h4 class="open">2017.09.09<i class="icon-down-dir"></i></h4>
               <ul class="list">
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <p class="time">09:00 ~ 10:30</p>
-                    <p class="plan">빙삭A</p>
-                    <p class="count"><strong>03</strong>/20</p>
-                    <p class="select">선택</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
                   </a>
                 </li>
               </ul>
             </li>
             <li>
-              <h4>2017.09.10</h4>
+              <h4>2017.09.09<i class="icon-down-dir"></i></h4>
+              <ul class="list">
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <h4>2017.09.11</h4>
+              <h4>2017.09.09<i class="icon-down-dir"></i></h4>
+              <ul class="list">
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
-              <h4>2017.09.12</h4>
+              <h4>2017.09.09<i class="icon-down-dir"></i></h4>
+              <ul class="list">
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="plan"><strong>플랜명</strong>빙삭A</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
+          <p class="attention">좌측의 날짜를 클릭하시면 날짜별 스케줄을 확인하실 수 있습니다.</p>
         </div>
-
-
-        <div class="reservation date active">
+        <div class="tab-data reservation date active">
           <h3 class="sr-only">예약정보</h3>
+          <div class="select-info">
+            <h4>선택확인</h4>
+            <p class="name">꼬닥A</p>
+            <p class="date">2017.09.09</p>
+            <p class="time">09:00~10:30</p>
+          </div>
 
+          <div class="ticket">
+            <h4>입장권</h4>
+            <label for="adult">어른</label>
+            <input id="adult" type="text" placeholder="0명">
+
+            <label for="teen">청소년/군인</label>
+            <input id="teen" type="text" placeholder="0명">
+
+            <label for="child">어린이</label>
+            <input id="child" type="text" placeholder="0명">
+
+            <label for="free">무료인원</label>
+            <input id="free" type="text" placeholder="0명">
+          </div>
+
+          <div class="parking">
+            <h4>주차료</h4>
+            <label for="large">대형</label>
+            <input id="large" type="text" placeholder="0대">
+
+            <label for="small">중/소형</label>
+            <input id="small" type="text" placeholder="0대">
+          </div>
+
+          <div class="total">
+            <h4>결제금액</h4>
+            <p class="price">30,000원</p>
+            <a href="#">주문하기</a>
+          </div>
         </div>
+        <!--// 날짜별 -->
 
 
+
+        <!-- 플랜별 -->
+        <div class="tab-data search plan">
+          <fieldset>
+            <legend class="sr-only">가용상품조회하기</legend>
+
+            <label class="sr-only" for="datepicker2">이용일자입력</label>
+            <input type="text" id="datepicker2" name="datepicker2" placeholder="이용일자입력">
+
+            <label class="sr-only" for="time2">시작시간대</label>
+            <input type="text" id="time2" name="time2" placeholder="시작시간대 ex) 09">
+
+            <p class="select-box">
+              <label class="sr-only" for="plantype2">플랜타입</label>
+              <select id="plantype2" class="plantype" name="plantype2">
+                <option>플랜타입</option>
+                <option>가족산림</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
+
+            <input type="checkbox" id="availability2" name="availability1">
+            <label class="availability" for="availability2"><i class="icon-angle-down"></i>예약가능여부</label>
+
+            <button>조회하기</button>
+
+          </fieldset>
+        </div>
+        <div class="tab-data table plan">
+          <h3 class="sr-only">예약가능 목록</h3>
+
+          <ul class="table-info">
+            <li>플랜명</li>
+            <li>이용일자</li>
+            <li>이용시간</li>
+            <li>잔여/제한</li>
+            <li>선택여부</li>
+          </ul>
+
+          <ul class="table">
+            <li class="open">
+              <h4 class="open">빙삭A<i class="icon-down-dir"></i></h4>
+              <ul class="list">
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <p class="date"><strong>이용일자</strong>2017.09.09</p>
+                    <p class="time"><strong>이용시간</strong>09:00~10:30</p>
+                    <p class="count"><strong>잔여/제한</strong><u>03</u>/20</p>
+                    <p class="select"><u>선택</u></p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h4>빙삭A<i class="icon-down-dir"></i></h4>
+            </li>
+            <li>
+              <h4>빙삭A<i class="icon-down-dir"></i></h4>
+            </li>
+            <li>
+              <h4>빙삭A<i class="icon-down-dir"></i></h4>
+            </li>
+          </ul>
+          <p class="attention">좌측의 플랜명을 클릭하시면 날짜별 스케줄을 확인하실 수 있습니다.</p>
+        </div>
+        <div class="tab-data reservation plan">
+          <h3 class="sr-only">예약정보</h3>
+          <div class="select-info">
+            <h4>선택확인</h4>
+            <p class="name">꼬닥A</p>
+            <p class="date">2017.09.09</p>
+            <p class="time">09:00~10:30</p>
+          </div>
+
+          <div class="ticket">
+            <h4>입장권</h4>
+            <label for="adult">어른</label>
+            <input id="adult" type="text" placeholder="0명">
+
+            <label for="teen">청소년/군인</label>
+            <input id="teen" type="text" placeholder="0명">
+
+            <label for="child">어린이</label>
+            <input id="child" type="text" placeholder="0명">
+
+            <label for="free">무료인원</label>
+            <input id="free" type="text" placeholder="0명">
+          </div>
+
+          <div class="parking">
+            <h4>주차료</h4>
+            <label for="large">대형</label>
+            <input id="large" type="text" placeholder="0대">
+
+            <label for="small">중/소형</label>
+            <input id="small" type="text" placeholder="0대">
+          </div>
+
+          <div class="total">
+            <h4>결제금액</h4>
+            <p class="price">30,000원</p>
+            <a href="#">주문하기</a>
+          </div>
+        </div>
+        <!--// 플랜별 -->
 
       </div>
   </article>
@@ -175,19 +569,6 @@
   <!-- S:footer -->
   <footer id="footer" class="sr-only">
     <div class="container">
-      <div class="footer_util">
-        <ul>
-            <li> <a href="/openos/help/privacy.do">개인정보취급방침</a> </li>
-            <li> <a href="/openos/help/copyright.do">저작권보호정책</a> </li>
-        </ul>
-      </div>
-      <address>
-        <p class="tel">제주안내 콜센터 (064) 120 생활민원 모바일 신고 : #1110-2114</p>
-        <p>제1청사 : (63584) 제주특별자치도 서귀포시 중앙로 105(서홍동)</p>
-        <p>제2청사 : (63565) 제주특별자치도 서귀포시 신중로 55(법환동)</p>
-        <p>1st Building. 105, Jungang-ro, Seogwipo-si, Jeju-do. Republic of Korea 63584</p>
-        <p>2nd Building. 55, Sinjung-ro, Seogwipo-si, Jeju-do. Republic of Korea 63565</p>
-      </address>
       <p class="copyright">Copyright© Seogwipo-si, All right Reserved.</p>
     </div>
   </footer>
