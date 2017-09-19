@@ -53,6 +53,24 @@
       "css": "right-dir",
       "code": 59395,
       "src": "fontawesome"
+    },
+    {
+      "uid": "qab5uvjyoc3uu4d2pvt8soshtgkuvpak",
+      "css": "minus",
+      "code": 59396,
+      "src": "typicons"
+    },
+    {
+      "uid": "yb3vdwfxck5hmudxna4fq8fcwo9xari9",
+      "css": "eq",
+      "code": 59397,
+      "src": "typicons"
+    },
+    {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59398,
+      "src": "entypo"
     }
   ]
 }

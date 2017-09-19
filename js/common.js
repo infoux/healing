@@ -13,12 +13,22 @@ $(document).ready(function () {
 
   $("ul.tabs a").click(function(){
     var activeItem = $(this).attr("data");
-
+    $("div.intro").removeClass("active");
     $("ul.tabs a").removeClass("active");
     $(this).addClass("active");
     $("div.tab-data").removeClass("active");
     $("div.tab-data."+ activeItem).addClass("active");
   });
+
+
+  $(".search button").click(function(){
+    var activeItem = $(this).attr("class");
+    $("div.intro").removeClass("active");
+    $(this).addClass("active");
+    $("div.tab-data").removeClass("active");
+    $("div.tab-data."+ activeItem).addClass("active");
+  });
+
 
 
   $("ul.table>li h4").click(function(){
@@ -33,6 +43,14 @@ $(document).ready(function () {
     $("ul.table .list a").removeClass("on");
     $(this).addClass("on");
   });
+
+  $("#discount .close").click(function(){
+    $("#discount").fadeOut();
+  });
+
+    $("div.discount button").click(function(){
+      $("#discount").fadeIn();
+    });
 
 
 
