@@ -13,6 +13,26 @@ $(document).ready(function () {
   } );
 
 
+  function infoTab() {
+
+    $("ul.table-info li").each(function(){
+      var tabName = $(this).attr("class");
+      $(this).css("width", $(this).parent().parent().find("ul.list p."+ tabName).width());
+      console.log(tabName);
+    });
+
+    $("div.tab-data.table.plan ul.list p.date").css("min-width", "34%");
+    $("div.tab-data.table.plan ul.list p.time").css("min-width", "34%");
+  }
+
+  infoTab();
+
+  $(window).resize(function(){
+        infoTab();
+  });
+
+
+
   $("p.select-box i").click(function(){
     $(this).parent().find("select").show().focus().click();
   })
@@ -24,6 +44,10 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("div.tab-data").removeClass("active");
     $("div.tab-data."+ activeItem).addClass("active");
+
+    infoTab();
+
+
   });
 
 
@@ -34,6 +58,8 @@ $(document).ready(function () {
     $("div.tab-data").removeClass("active");
     $("div.tab-data."+ activeItem).addClass("active");
   });
+
+
 
 
 
@@ -57,6 +83,7 @@ $(document).ready(function () {
     $("div.discount button").click(function(){
       $("#discount").fadeIn();
     });
+
 
 
 

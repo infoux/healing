@@ -854,22 +854,17 @@ body {
               .center;
 
               &:first-child {
-                width:185px;
+                width:165px;
               }
               &:nth-child(2) {
-                width:146.72px;
-                margin-left:24px;
+
+                margin-left:20px;
               }
-              &:nth-child(3) {
-                width:146.72px;
-              }
-              &:nth-child(4) {
-                width:146.72px;
-              }
-              &:nth-child(5) {
-                width:83.83px;
-              }
+
             }
+
+
+
           }
 
 
@@ -893,7 +888,7 @@ body {
               background:@white;
               .rem(height, 30);
               .rem(line-height, 30);
-              .rem(padding, 0 10);
+              .rem(padding, 0 50 0 10);
               .rem(margin, 0 0 10);
               .rem(border-radius, 5);
               .rem(font-size, 12);
@@ -903,9 +898,10 @@ body {
               border:1px solid rgba(0, 0, 0, 0.1);
               border-left:none;
               border-top:none;
+              .ellipse;
 
               @media all and (min-width: 1200px) {
-                width:185px;
+                width:165px;
                 height:52px;
                 line-height:52px;
                 font-size:16px;
@@ -919,6 +915,11 @@ body {
                   top:0;
                   bottom:0;
                   height:auto;
+                  line-height:1.6;
+                  white-space:normal;
+                  min-height:52px;
+
+
                 }
               }
 
@@ -954,7 +955,7 @@ body {
               .hidden;
 
               @media all and (min-width: 1200px) {
-                padding:0 0 0 200px;
+                padding:0 0 0 180px;
               }
 
               li {
@@ -1005,7 +1006,7 @@ body {
 
                       @media all and (min-width: 1200px) {
                         .static;
-                        width:28%;
+                        width:20%;
                       }
 
                       u {
@@ -1051,10 +1052,14 @@ body {
                     }
 
                     @media all and (min-width: 1200px) {
-                      width:28%;
+                      width:20%;
                       .center;
+                      &.plan {
+                        width:48%;
+
+                      }
                       &.select {
-                        width:16%;
+                        width:12%;
                       }
                     }
                   }
@@ -1074,11 +1079,14 @@ body {
                   }
                 }
               }
+
             }
           }
 
           &.open {
             border-bottom:1px solid rgba(0, 0, 0, 0.1);
+            min-height:62px;
+
 
             ul.list {
               height:auto;
