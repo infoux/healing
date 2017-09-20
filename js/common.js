@@ -2,8 +2,14 @@
 $(document).ready(function () {
 
   $( function() {
-    $( "#datepicker1" ).datepicker({dateFormat: 'yy-mm-dd'});
-    $( "#datepicker2" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#datepicker1-from" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#datepicker1-to" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+    $( "#datepicker2-from" ).datepicker({dateFormat: 'yy-mm-dd'});
+    $( "#datepicker2-to" ).datepicker({dateFormat: 'yy-mm-dd'});
+
+
+
   } );
 
 

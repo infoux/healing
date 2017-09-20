@@ -697,10 +697,21 @@ body {
               margin-right:10px;
             }
 
+            &#time1,
+            &#time2 {
+              width:100%;
+            }
 
             @media all and (min-width: 1200px) {
-              width:246px;
+              width:180px;
               margin-right:10px;
+
+              &#time1,
+              &#time2 {
+                width:180px;
+              }
+
+
             }
 
           }
@@ -709,7 +720,7 @@ body {
             .relative;
             @media all and (min-width: 1200px) {
               .inline-block;
-              width:246px;
+              min-width:180px;
               margin-right:10px;
             }
 
@@ -2368,7 +2379,8 @@ body {
       }
 
       td {
-        a {
+        a,
+        span {
           .block;
           .rem(padding, 10 0);
           .center;
