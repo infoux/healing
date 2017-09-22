@@ -1030,6 +1030,7 @@ body {
 
                       u {
                         .block;
+                        .top;
                         background:@white;
                         .rem(width, 20);
                         .rem(height, 20);
@@ -1142,7 +1143,9 @@ body {
           }
           &.name {
             color:@green;
+            .block;
             .rem(font-size, 15);
+            .rem(margin, 0 0 10);
             .bold;
             @media all and (min-width: 1200px) {
               font-size:22px;
@@ -1155,11 +1158,9 @@ body {
           li {
             .inline-block;
             .rem(padding, 6);
-            .right;
             width:50%;
             label {
-              .inline-block;
-              float:left;
+              .block;
               .rem(font-size, 12);
               .rem(height, 23);
               .rem(line-height, 23);
@@ -1173,10 +1174,9 @@ body {
             }
             input[type="text"] {
               .inline-block;
-              .rem(width, 40);
+              width:100%;
               .rem(height, 23);
               @media all and (min-width: 1200px) {
-                width:60px;
                 height:46px;
               }
             }
@@ -1300,33 +1300,34 @@ body {
 
             dt {
               .inline-block;
-              .rem(width, 60);
-              .rem(font-size, 12);
+              .rem(width, 70);
+              .rem(font-size, 11);
               color:#183c00;
               .bold;
+              letter-spacing:-1px;
 
-              &:nth-of-type(odd){
-                .rem(width, 50);
+              &:nth-of-type(even){
+                .rem(padding, 0 0 0 10);
               }
               @media all and (min-width: 1200px) {
-                font-size:16px;
-                width:80px;
+                font-size:14px;
+                width:86px;
               }
             }
             dd {
               .inline-block;
               margin:0;
               .right;
-              .remCalcH(width, 60);
+              .remCalcH(width, 70);
               .rem(font-size, 12);
+              word-break:keep-all;
 
               &:nth-of-type(odd){
-                .remCalcH(width, 50);
                 .rem(padding, 0 10 0 0);
               }
 
               @media all and (min-width: 1200px) {
-                width:calc(~"50% - 80px");
+                width:calc(~"50% - 86px");
                 font-size:16px;
               }
 

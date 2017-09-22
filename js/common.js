@@ -57,6 +57,7 @@ $(document).ready(function () {
     $(this).addClass("active");
     $("div.tab-data").removeClass("active");
     $("div.tab-data."+ activeItem).addClass("active");
+    infoTab();
   });
 
 
