@@ -1415,8 +1415,10 @@ body {
         .rem(border-radius, 0 0 5 5);
         .zero;
         .left;
-        .rem(padding, 15);
+        .relative;
+        .rem(padding, 15 120 15 15);
         .rem(margin-bottom, 12);
+        word-break:keep-all;
         line-height:1.6;
         width:100%;
         background:rgba(255, 255, 255, 0.8);
@@ -1430,13 +1432,12 @@ body {
         div {
           .inline-block;
           &.right {
-            float:right;
+            .absolute;
+            .rem(right, 15);
+            .rem(bottom, 15);
           }
         }
 
-        p.time {
-          .rem(padding-left, 10);
-        }
 
         h4,
         h5,
@@ -1446,7 +1447,7 @@ body {
           .rem(font-size, 12);
           @media all and (min-width: 1200px) {
             font-size:18px;
-            padding: 0 20px;
+            padding: 0 0 0 20px;
           }
 
         }
@@ -1457,7 +1458,7 @@ body {
           color:#1b8000;
           .block;
           @media all and (min-width: 1200px) {
-            .inline-block;
+
             font-size:22px;
           }
 
@@ -1472,11 +1473,22 @@ body {
 
         }
 
+        p {
+          .rem(padding-right, 10);
+          .bold;
+
+          &.count {
+            .normal;
+          }
+        }
+
         .price {
           .bold;
           .rem(font-size, 16);
+          padding:0;
           @media all and (min-width: 1200px) {
             font-size:25px;
+            padding:0 0 0 10px;
           }
 
         }
@@ -1910,6 +1922,7 @@ body {
             font-size:16px;
           }
         }
+
       }
 
 
@@ -2035,6 +2048,12 @@ body {
           .inline-block;
           .rem(font-size, 12);
           .rem(margin, 10 10 0 0);
+
+          &.count {
+            color:@blue;
+            .rem(margin, 4 0 0 0);
+            word-break:keep-all;
+          }
 
           @media all and (min-width: 1200px) {
             font-size:18px;
