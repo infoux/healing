@@ -1411,6 +1411,80 @@ body {
 
 
 
+
+      div.order-error {
+        .rem(border-radius, 0 0 5 5);
+
+        .relative;
+        .rem(padding, 15);
+        .rem(margin-bottom, 12);
+        word-break:keep-all;
+        line-height:1.6;
+        width:100%;
+        background:rgba(255, 255, 255, 0.8);
+
+        @media all and (min-width: 1200px) {
+          .center;
+          margin-bottom:20px;
+          border-radius: 0 5px 5px 5px;
+          padding:30px 15px;
+          font-size:16px;
+
+        }
+
+        h2 {
+          .rem(font-size, 22);
+          color:#1b8000;
+          @media all and (min-width: 1200px) {
+            font-size:40px;
+          }
+          small {
+            .block;
+            .rem(font-size, 13);
+            .normal;
+            color:@gray-dark;
+
+            @media all and (min-width: 1200px) {
+              font-size:22px;
+            }
+
+          }
+
+          &::before {
+            content:"";
+            .block;
+            .rem(width, 97.5);
+            .rem(height, 85);
+            .rem(margin, 20 auto 20);
+            background:url("../images/icon-attention.png") no-repeat center / 100%;
+
+
+            @media all and (min-width: 1200px) {
+              width:195px;
+              height:170px;
+              margin:50px auto 40px;
+
+            }
+
+          }
+
+        }
+
+        p {
+          .rem(font-size, 12);
+        }
+
+
+
+
+
+
+      }
+
+
+
+
+
       div.order-info {
         .rem(border-radius, 0 0 5 5);
         .zero;
