@@ -25,6 +25,8 @@ $(document).ready(function () {
     $("div.tab-data.table.plan ul.list p.time").css("min-width", "34%");
   }
 
+
+
   infoTab();
 
   $(window).resize(function(){
@@ -83,6 +85,8 @@ $(document).ready(function () {
 
     $("div.discount button").click(function(){
       $("#discount").fadeIn();
+      $("#discount").css("height", $(document).height());
+      $('html, body').animate({scrollTop : 0},800);
     });
 
 
