@@ -16,7 +16,10 @@
 
 <body>
   <!-- S:skip_navi -->
-  <div class="skip_navi"> <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a> <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a> </div>
+  <div class="skip_navi">
+    <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
+    <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
+  </div>
   <!-- E:skip_navi -->
   <!-- S:header -->
   <header id="header">
@@ -29,63 +32,77 @@
   <article id="content" class="reservation">
     <div class="container">
       <ul class="navigation">
-        <li class="active"><strong>01</strong>주문/결제 <i class="icon-angle-right"></i ></li>
-          <li><strong>02</strong>주문완료</li>
-        </ul>
+        <li class="active">
+          <strong>01</strong>주문/결제
+          <i class="icon-angle-right"></i>
+        </li>
+        <li>
+          <strong>02</strong>주문완료</li>
+      </ul>
 
-        <div class="order-info">
-          <div class="left">
-            <h4>꼬닥A</h4>
-            <p class="date">2017.09.09</p>
-            <p class="time">09:00~10:30</p>
-            <p class="count">일반성인 2명 / 어어리이인이 3명 / 군인 3명 / 청소년 2명</p>
-          </div>
-          <div class="right">
-            <h5>결제금액</h5>
-            <p class="price">30,000원</p>
-          </div>
+      <div class="order-info">
+        <div class="left">
+          <h4>꼬닥A</h4>
+          <p class="date">2017.09.09</p>
+          <p class="time">09:00~10:30</p>
+          <p class="count">일반성인 2명 / 어어리이인이 3명 / 군인 3명 / 청소년 2명</p>
         </div>
+        <div class="right">
+          <h5>결제금액</h5>
+          <p class="price">30,000원</p>
+        </div>
+      </div>
 
-        <div class="input-box">
-          <h4>주문자정보</h4>
+      <div class="input-box">
+        <h4>주문자정보</h4>
 
-          <dl>
-            <dt><label for="name">주문자</label></dt>
-            <dd>
-              <input id="name" name="name" type="text">
-            </dd>
+        <dl>
+          <dt>
+            <label for="name">주문자</label>
+          </dt>
+          <dd>
+            <input id="name" name="name" type="text">
+          </dd>
 
-            <dt><label for="phone">핸드폰</label></dt>
-            <dd>
-              <input id="phone" name="phone" type="text">
-              <p class="info">“-”제외, 숫자만 입력. 핸드폰번호 오입력시 예약확인 SMS발송이 되지 않습니다.</p>
-            </dd>
+          <dt>
+            <label for="phone">핸드폰</label>
+          </dt>
+          <dd>
+            <input id="phone" name="phone" type="text">
+            <p class="info">“-”제외, 숫자만 입력. 핸드폰번호 오입력시 예약확인 SMS발송이 되지 않습니다.</p>
+          </dd>
 
-            <dt><label for="mail">E-MAIL</label></dt>
-            <dd>
-              <input id="mail" name="mail" type="text">
-              <p class="at">@</p>
-              <input id="mail-at" name="mail-at" type="text">
-              <p class="select-box">
-                <label class="sr-only" for="mail-select">메일계정직접입력</label>
-                <select id="mail-select" name="mail-select">
-                  <option>직접입력</option>
-                  <option>google.com</option>
-                  <option>naver.com</option>
-                </select>
-                <i class="icon-down-dir"></i>
-          </p>
+          <dt>
+            <label for="mail">E-MAIL</label>
+          </dt>
+          <dd>
+            <input id="mail" name="mail" type="text">
+            <p class="at">@</p>
+            <input id="mail-at" name="mail-at" type="text">
+            <p class="select-box">
+              <label for="mail-select">메일계정직접입력</label>
+              <select id="mail-select" name="mail-select">
+                <option>직접입력</option>
+                <option>google.com</option>
+                <option>naver.com</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
 
           </dd>
 
-          <dt><label for="">비밀번호</label></dt>
+          <dt>
+            <label for="">비밀번호</label>
+          </dt>
           <dd>
             <input id="" name="" type="password">
             <p class="info">6~8자 영문, 숫자, 특수문자(!,@,#,$,%,^,~,_,-,+,=,(,),[,])등을 조합하여 입력하십시오.</p>
           </dd>
 
 
-          <dt><label for="">비밀번호확인</label></dt>
+          <dt>
+            <label for="">비밀번호확인</label>
+          </dt>
           <dd>
             <input id="" name="" type="password">
             <p class="info">비밀번호는 예약확인시 사용되므로 기억하셔야 합니다.</p>
@@ -93,173 +110,214 @@
 
 
 
-          </dl>
-    </div>
-
-    <div class="input-box">
-      <h4>주문자 추가정보</h4>
-
-      <dl>
-        <dt><label for="nation">국가</label></dt>
-        <dd class="half">
-          <p class="select-box more-info">
-            <select id="nation" name="nation">
-                  <option>선택하세요</option>
-                  <option>대한민국</option>
-                </select>
-            <i class="icon-down-dir"></i>
-          </p>
-        </dd>
-
-        <dt><label for="gender">성별</label></dt>
-        <dd class="half">
-          <p class="select-box more-info">
-            <select id="gender" name="gender">
-                  <option>선택하세요</option>
-                  <option>중성</option>
-                </select>
-            <i class="icon-down-dir"></i>
-          </p>
-        </dd>
-
-        <dt><label for="staArea">지역</label></dt>
-        <dd class="half">
-          <p class="select-box more-info">
-            <select id="staArea" name="staArea">
-                  <option>선택하세요</option>
-                  <option>제주</option>
-                </select>
-            <i class="icon-down-dir"></i>
-          </p>
-        </dd>
-
-        <dt><label for="age">연령</label></dt>
-        <dd class="half">
-          <p class="select-box more-info">
-            <select id="age" name="age">
-                  <option>선택하세요</option>
-                  <option>100대</option>
-                </select>
-            <i class="icon-down-dir"></i>
-          </p>
-        </dd>
-
-
-
-
-
-      </dl>
-    </div>
-
-
-    <div class="input-box">
-      <h4>결제방법</h4>
-
-      <div class="radio">
-
-        <ul class="tabs">
-          <li><a data="tab01">신용/체크카드</a></li>
-          <li><a data="tab02" class="active">실시간 계좌이체</a></li>
-          <li><a data="tab03" class="">가상계좌 입금</a></li>
-        </ul>
+        </dl>
       </div>
-    </div>
 
-    <div class="input-box">
-      <h4>개인정보 수집 및 동의</h4>
-      <div class="agree">
+      <div class="input-box">
+        <h4>주문자 추가정보</h4>
 
-        <div class="scroll">
-          <p>수집한 개인정보를 다음의 목적으로 보유하고 활용합니다.</p>
-          <p>1. 개인정보의 수집ㆍ이용 목적</p>
-          <p>- 온라인 예약신청 관리 및 예약서비스 제공</p>
-          <p>2. 수집ㆍ이용하려는 개인정보의 항목</p>
-          <p>- 성명, 주소, 이메일, 연락처, 금융계좌()</p>
-          <p>3. 개인정보의 보유 및 이용기간 : 3년</p>
-          <p>(보존이유 : 산림 문화ㆍ휴양에 관한 법률 제17조에 의한 예약자관리)</p>
-          <p>4. 이용자는 개인정보 수집 및 이용 동의에 대한 거부 권리가 있습니다.</p>
-          <p>단, 개인정보 수집·이용에 동의를 하지 않으실 경우에는 예약이 제한됩니다. </p>
-        </div>
+        <dl>
+          <dt>
+            국가
+          </dt>
+          <dd class="half">
+            <p class="select-box more-info">
+              <label for="nation">국가선택</label>
+              <select id="nation" name="nation">
+                <option>선택하세요</option>
+                <option>대한민국</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
+          </dd>
 
-        <p class="agree">
-          <label for="agreeY">개인정보 제공에 동의합니다.</label>
-          <input type="checkbox" id="agreeY" name="agreeY[]" class="checkbox">
-        </p>
+          <dt>
+            성별
+          </dt>
+          <dd class="half">
+            <p class="select-box more-info">
+              <label for="gender">성별선택</label>
+              <select id="gender" name="gender">
+                <option>선택하세요</option>
+                <option>중성</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
+          </dd>
+
+          <dt>
+            지역
+          </dt>
+          <dd class="half">
+            <p class="select-box more-info">
+              <label for="staArea">지역선택</label>
+              <select id="staArea" name="staArea">
+                <option>선택하세요</option>
+                <option>제주</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
+          </dd>
+
+          <dt>
+            연령
+          </dt>
+          <dd class="half">
+            <p class="select-box more-info">
+              <label for="age">연령선택</label>
+              <select id="age" name="age">
+                <option>선택하세요</option>
+                <option>100대</option>
+              </select>
+              <i class="icon-down-dir"></i>
+            </p>
+          </dd>
+
+
+
+
+
+        </dl>
       </div>
-    </div>
 
-    <div class="input-box">
-      <h4>위약금안내</h4>
-      <div class="agree">
 
-        <div class="scroll">
-          <p class="txt">-성수기(7월15일부터 8월24일까지) ·사용예정일 10일전에 취소 : 전액 환급 </p>
-          <p class="txt">·사용예정일 9~7일전에 취소 : 사용료의 10% 공제 후 환불 </p>
-          <p class="txt">·사용예정일 6~5일전에 취소 : 사용료의 30% 공제 후 환불 </p>
-          <p class="txt">·사용예정일 4~3일전에 취소 : 사용료의 50% 공제 후 환불 </p>
-          <p class="txt">·사용예정일 2~당일 취소 또는 취소하지 않은 상태에서 입실하지 않은 경우 : 사용료의 80% 공제 후 환불 </p>
-          <p class="txt"> </p>
-          <p class="txt">-비수기(성수기 이외의 기간) ·사용예정일 2일전에 취소 : 전액 환급 </p>
-          <p class="txt">·사용예정일 1일전에 취소 : 사용료의 10% 공제 후 환불 </p>
-          <p class="txt">·사용예정일 당일 취소 또는 취소하지 않은 상태에서 입실하지 않은 경우 : 사용료의 20% 공제 후 환불 </p>
+      <div class="input-box">
+        <h4>결제방법</h4>
 
-        </div>
+        <div class="radio">
 
-        <p class="agree">
-          <label for="agreeY2">위의 위약금 내용을 확인 하였습니다.</label>
-          <input type="checkbox" id="agreeY2" name="agreeY2[]" class="checkbox">
-        </p>
-
-      </div>
-    </div>
-
-    <div class="input-box">
-      <div class="result">
-
-        <div class="tab01 tab-data">
-
-          <ul>
-            <li>상품금액 <strong>53,000원</strong></li>
-            <li><i class="icon-minus"></i>할인금액 <strong>0원</strong></li>
-            <li class="result">최종결제금액 <strong>53,000원</strong></li>
+          <ul class="tabs">
+            <li>
+              <a data="tab01">신용/체크카드</a>
+            </li>
+            <li>
+              <a data="tab02" class="active">실시간 계좌이체</a>
+            </li>
+            <li>
+              <a data="tab03" class="">가상계좌 입금</a>
+            </li>
           </ul>
-          <div class="btn-area">
-            <a class="btn ok" href="javascript:" onclick="javascript:f_start_pay();">카드 결제하기</a>
-            <a class="btn cancle" href="javascript:" onclick="javascript:f_cancel()">취소하기</a>
-          </div>
         </div>
-
-        <div class=" tab02 tab-data active">
-
-          <ul>
-            <li>상품금액 <strong>53,000원</strong></li>
-            <li><i class="icon-minus"></i>할인금액 <strong>0원</strong></li>
-            <li class="result"><i class="icon-eq"></i>최종결제금액 <strong>53,000원</strong></li>
-          </ul>
-          <div class="btn-area">
-            <a class="btn ok" href="javascript:" onclick="javascript:f_start_pay();">실시간 계좌이체하기</a>
-            <a class="btn cancle" href="javascript:" onclick="javascript:f_cancel()">취소하기</a>
-          </div>
-        </div>
-
-        <div class="tab03 tab-data">
-
-          <ul>
-            <li>상품금액 <strong>53,000원</strong></li>
-            <li><i class="icon-minus"></i>할인금액 <strong>0원</strong></li>
-            <li class="result"><i class="icon-eq"></i>최종결제금액 <strong>53,000원</strong></li>
-          </ul>
-          <div class="btn-area">
-            <a class="btn ok" href="javascript:" onclick="javascript:f_start_pay();">가상계좌 입금하기</a>
-            <a class="btn cancle" href="javascript:" onclick="javascript:f_cancel()">취소하기</a>
-          </div>
-        </div>
-
       </div>
 
+      <div class="input-box">
+        <h4>개인정보 수집 및 동의</h4>
+        <div class="agree">
+
+          <div class="scroll">
+            <p>수집한 개인정보를 다음의 목적으로 보유하고 활용합니다.</p>
+            <p>1. 개인정보의 수집ㆍ이용 목적</p>
+            <p>- 온라인 예약신청 관리 및 예약서비스 제공</p>
+            <p>2. 수집ㆍ이용하려는 개인정보의 항목</p>
+            <p>- 성명, 주소, 이메일, 연락처, 금융계좌()</p>
+            <p>3. 개인정보의 보유 및 이용기간 : 3년</p>
+            <p>(보존이유 : 산림 문화ㆍ휴양에 관한 법률 제17조에 의한 예약자관리)</p>
+            <p>4. 이용자는 개인정보 수집 및 이용 동의에 대한 거부 권리가 있습니다.</p>
+            <p>단, 개인정보 수집·이용에 동의를 하지 않으실 경우에는 예약이 제한됩니다. </p>
+          </div>
+
+          <p class="agree">
+            <label for="agreeY">개인정보 제공에 동의합니다.</label>
+            <input type="checkbox" id="agreeY" name="agreeY[]" class="checkbox">
+          </p>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <h4>위약금안내</h4>
+        <div class="agree">
+
+          <div class="scroll">
+            <p class="txt">-성수기(7월15일부터 8월24일까지) ·사용예정일 10일전에 취소 : 전액 환급 </p>
+            <p class="txt">·사용예정일 9~7일전에 취소 : 사용료의 10% 공제 후 환불 </p>
+            <p class="txt">·사용예정일 6~5일전에 취소 : 사용료의 30% 공제 후 환불 </p>
+            <p class="txt">·사용예정일 4~3일전에 취소 : 사용료의 50% 공제 후 환불 </p>
+            <p class="txt">·사용예정일 2~당일 취소 또는 취소하지 않은 상태에서 입실하지 않은 경우 : 사용료의 80% 공제 후 환불 </p>
+            <p class="txt"> </p>
+            <p class="txt">-비수기(성수기 이외의 기간) ·사용예정일 2일전에 취소 : 전액 환급 </p>
+            <p class="txt">·사용예정일 1일전에 취소 : 사용료의 10% 공제 후 환불 </p>
+            <p class="txt">·사용예정일 당일 취소 또는 취소하지 않은 상태에서 입실하지 않은 경우 : 사용료의 20% 공제 후 환불 </p>
+
+          </div>
+
+          <p class="agree">
+            <label for="agreeY2">위의 위약금 내용을 확인 하였습니다.</label>
+            <input type="checkbox" id="agreeY2" name="agreeY2[]" class="checkbox">
+          </p>
+
+        </div>
+      </div>
+
+      <div class="input-box">
+        <div class="result">
+
+          <div class="tab01 tab-data">
+
+            <ul>
+              <li>상품금액
+                <strong>53,000원</strong>
+              </li>
+              <li>
+                <i class="icon-minus"></i>할인금액
+                <strong>0원</strong>
+              </li>
+              <li class="result">최종결제금액
+                <strong>53,000원</strong>
+              </li>
+            </ul>
+            <div class="btn-area">
+              <a class="btn ok" href="javascript:" onclick="javascript:f_start_pay();">카드 결제하기</a>
+              <a class="btn cancle" href="javascript:" onclick="javascript:f_cancel()">취소하기</a>
+            </div>
+          </div>
+
+          <div class=" tab02 tab-data active">
+
+            <ul>
+              <li>상품금액
+                <strong>53,000원</strong>
+              </li>
+              <li>
+                <i class="icon-minus"></i>할인금액
+                <strong>0원</strong>
+              </li>
+              <li class="result">
+                <i class="icon-eq"></i>최종결제금액
+                <strong>53,000원</strong>
+              </li>
+            </ul>
+            <div class="btn-area">
+              <a class="btn ok" href="javascript:" onclick="javascript:f_start_pay();">실시간 계좌이체하기</a>
+              <a class="btn cancle" href="javascript:" onclick="javascript:f_cancel()">취소하기</a>
+            </div>
+          </div>
+
+          <div class="tab03 tab-data">
+
+            <ul>
+              <li>상품금액
+                <strong>53,000원</strong>
+              </li>
+              <li>
+                <i class="icon-minus"></i>할인금액
+                <strong>0원</strong>
+              </li>
+              <li class="result">
+                <i class="icon-eq"></i>최종결제금액
+                <strong>53,000원</strong>
+              </li>
+            </ul>
+            <div class="btn-area">
+              <a class="btn ok" href="javascript:" onclick="javascript:f_start_pay();">가상계좌 입금하기</a>
+              <a class="btn cancle" href="javascript:" onclick="javascript:f_cancel()">취소하기</a>
+            </div>
+          </div>
+
+        </div>
 
 
-    </div>
+
+      </div>
     </div>
 
 
