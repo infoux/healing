@@ -2,7 +2,6 @@
 @import "normalize.css";
 @import "rem.less";
 @import "fontello.css";
-
 /* fonts */
 @font-face {
   font-family: 'Nanum Gothic';
@@ -32,7 +31,6 @@
   src: url("../font/NanumGothic-ExtraBold.eot");
   src: url("../font/NanumGothic-ExtraBold.eot?#iefix") format('embedded-opentype'), url("../font/NanumGothic-ExtraBold.woff") format('woff'), url("../font/NanumGothic-ExtraBold.ttf") format('truetype');
 }
-
 /* basic */
 @min-width: 320px;
 @myfont: "Nanum Gothic";
@@ -40,26 +38,22 @@
 @header-height: 100px;
 @white: #fff;
 @black: #000;
-
 /* gray */
 @gray-darker: lighten(@black, 13.5%); // #222
 @gray-dark: #4a4a4a;
 @gray: #ccc;
 @gray-light: #999;
 @gray-lighter: #ccc;
-
 /* blue */
 @blue-darker: #0f3e62; // #222
 @blue-dark: #1f5176; // #333
 @blue: #0055b5;
 @blue-light: #0a84dc;
 @blue-lighter: #bce1ff;
-
 /* etc color */
 @green: #3da300;
 @red: #ff3300;
 /* mixin */
-
 .bold {
   font-weight: 800;
 }
@@ -337,9 +331,7 @@
     height: auto;
   }
 }
-
 /* header */
-
 * {
   .box-sizing;
 }
@@ -362,9 +354,7 @@ a {
   text-decoration: none;
   color: @gray-dark;
 }
-
 /*font*/
-
 html {
   min-width: @min-width;
   font-size: 14px;
@@ -415,7 +405,6 @@ body {
   overflow: visible;
   clip: auto;
 }
-
 /* layout style */
 body {
   min-height: 100%;
@@ -480,7 +469,6 @@ body {
         font-size: 22px;
       }
     }
-
   }
 
   header#header {
@@ -534,7 +522,6 @@ body {
             @media all and (min-width: 1200px) {
               margin-right: 10px;
             }
-
           }
 
           a {
@@ -558,7 +545,6 @@ body {
               .bold;
               color: @green;
             }
-
           }
         }
       }
@@ -584,7 +570,7 @@ body {
         select {
           .rem(height, 28);
           .rem(padding, 0 10);
-          .rem(margin, 0 0 10);
+          .rem(margin, 0);
           .rem(border-radius, 5);
           .rem(font-size, 12);
           width: auto;
@@ -598,7 +584,13 @@ body {
             font-size: 18px;
             margin: 0;
           }
+        }
 
+        input[type="text"] {
+          .rem(margin, 0 0 10);
+          @media all and (min-width: 1200px) {
+            margin: 0;
+          }
         }
 
         label {
@@ -606,12 +598,10 @@ body {
           @media all and (min-width: 1200px) {
             font-size: 16px;
           }
-
         }
         @media all and (min-width: 1200px) {
           padding: 30px;
         }
-
       }
 
       div.intro,
@@ -649,9 +639,7 @@ body {
             font-size: 18px;
             color: #1d540e;
           }
-
         }
-
       }
 
       div.search {
@@ -669,7 +657,6 @@ body {
             width: calc(~"50% - 5px");
 
             &:first-of-type {
-
               margin-right: 10px;
             }
 
@@ -685,9 +672,7 @@ body {
               &#time2 {
                 width: 180px;
               }
-
             }
-
           }
 
           label {
@@ -752,18 +737,14 @@ body {
               .full-position;
               font-size: 0;
               .rem(border-radius, 5);
-
               color: @gray-dark;
               background: @white;
               border: 1px solid rgba(0, 0, 0, 0.1);
               border-left: none;
               border-top: none;
               @media all and (min-width: 1200px) {
-
                 margin: 0;
-
               }
-
             }
 
             i {
@@ -786,7 +767,6 @@ body {
                 line-height: 44px;
                 font-size: 18px;
               }
-
             }
           }
 
@@ -803,16 +783,15 @@ body {
             border-left: none;
             border-top: none;
             background: url("../images/btn-bg.png") no-repeat center / cover;
+            .rem(margin, 10 0 0);
             @media all and (min-width: 1200px) {
               width: 193px;
               height: 55px;
-
               line-height: 55px;
               font-size: 18px;
+              margin: 0;
             }
-
           }
-
         }
       }
 
@@ -820,7 +799,6 @@ body {
         .rem(font-size, 12);
         width: 100%;
         @media all and (min-width: 1200px) {
-
           width: 800px;
           margin-right: 20px;
         }
@@ -848,14 +826,10 @@ body {
               }
 
               &:nth-child(2) {
-
                 margin-left: 20px;
               }
-
             }
-
           }
-
         }
 
         ul.table {
@@ -863,10 +837,50 @@ body {
           .mapazero;
           .zero;
 
+          i.badge {
+            .inline-block;
+            .relative;
+            .center;
+            color: @white;
+            background: #ccc;
+            border-radius: 50%;
+            .rem(width, 17);
+            .rem(height, 17);
+            .rem(top, 1);
+            .rem(margin, 0 6 0 0);
+            @media all and (min-width: 1200px) {
+              width: 23px;
+              height: 23px;
+              margin: 0 6px;
+              top: 4px;
+            }
+
+            &.icon-clover {
+              background: #99c356;
+            }
+
+            &.icon-leaf {
+              background: #4db173;
+            }
+
+            &::before {
+              .relative;
+              .rem(top, 0);
+              margin: 0;
+              @media all and (min-width: 1200px) {
+                top: -4px;
+              }
+            }
+          }
+
           & > li {
             .relative;
             .inline-block;
             .rem(width, 100%);
+
+            .legend {
+              .none;
+            }
 
             h4 {
               .relative;
@@ -903,11 +917,10 @@ body {
                   line-height: 1.6;
                   white-space: normal;
                   min-height: 52px;
-
                 }
               }
 
-              i {
+              i.icon-down-dir {
                 .absolute;
                 .rem(right, 3);
                 .rem(top, 3);
@@ -933,11 +946,13 @@ body {
 
             ul.list {
               .no-list;
-              .mapazero;
+              padding: 0;
+              .rem(margin, 42 0 0);
               height: 0;
               .hidden;
               @media all and (min-width: 1200px) {
                 padding: 0 0 0 180px;
+                margin: 0;
               }
 
               li {
@@ -974,6 +989,10 @@ body {
                       .top;
                       height: 34px;
                       line-height: 34px;
+                    }
+
+                    &.plan {
+                      .left;
                     }
 
                     &.count {
@@ -1032,7 +1051,6 @@ body {
 
                       &.plan {
                         width: 48%;
-
                       }
 
                       &.select {
@@ -1056,13 +1074,37 @@ body {
                     }
                   }
                 }
-
               }
             }
 
             &.open {
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
               min-height: 62px;
+
+              .legend {
+                .inline-block;
+                z-index: 4;
+                .absolute;
+                .rem(top, 26);
+                .rem(font-size, 16);
+                .rem(line-height, 20);
+                width: 100%;
+                color: #555;
+                .center;
+                @media all and (min-width: 1200px) {
+                  line-height: 34px;
+                  margin: 0 0 10px;
+                  left: 0;
+                  bottom: 0;
+                  top: auto;
+                  width: auto;
+                }
+
+                i {
+                  color: @white;
+                  .rem(margin-right, 3);
+                }
+              }
 
               ul.list {
                 height: auto;
@@ -1073,9 +1115,7 @@ body {
               padding-top: 10px;
               border-top: 1px solid rgba(255, 255, 255, 0.8);
             }
-
           }
-
         }
 
         p.attention {
@@ -1113,7 +1153,6 @@ body {
             .rem(margin-right, 10);
             @media all and (min-width: 1200px) {
               font-size: 18px;
-
             }
 
             &.name {
@@ -1146,7 +1185,6 @@ body {
                   height: 46px;
                   line-height: 46px;
                 }
-
               }
 
               input[type="text"] {
@@ -1198,7 +1236,6 @@ body {
                 }
               }
             }
-
           }
 
           &.total {
@@ -1224,7 +1261,6 @@ body {
                 font-size: 26px;
                 float: right;
               }
-
             }
 
             a {
@@ -1233,7 +1269,6 @@ body {
               .center;
               .rem(width, 107.5);
               .rem(height, 34);
-
               color: @white;
               .bold;
               .rem(border-radius, 5);
@@ -1247,10 +1282,8 @@ body {
                 width: 100%;
                 height: 68px;
                 margin: 16px auto 0;
-
                 line-height: 68px;
                 font-size: 22px;
-
               }
             }
           }
@@ -1283,13 +1316,10 @@ body {
                 &:nth-of-type(even) {
                   .rem(padding, 0 0 0 10);
                   @media all and (min-width: 1200px) {
-
                     padding: 0;
                   }
-
                 }
                 @media all and (min-width: 1200px) {
-
                   font-size: 14px;
                   width: 86px;
                 }
@@ -1310,13 +1340,11 @@ body {
                   width: calc(~"50% - 86px");
                   font-size: 16px;
                 }
-
               }
             }
           }
         }
       }
-
     }
   }
 
@@ -1389,7 +1417,6 @@ body {
           margin-bottom: 20px;
           border-radius: 0 5px 5px 5px;
           padding: 30px 15px;
-
         }
 
         h2 {
@@ -1407,7 +1434,6 @@ body {
             @media all and (min-width: 1200px) {
               font-size: 22px;
             }
-
           }
 
           &::before {
@@ -1421,11 +1447,8 @@ body {
               width: 195px;
               height: 170px;
               margin: 50px auto 40px;
-
             }
-
           }
-
         }
 
         p {
@@ -1433,9 +1456,7 @@ body {
           @media all and (min-width: 1200px) {
             font-size: 18px;
           }
-
         }
-
       }
 
       div.order-info {
@@ -1453,7 +1474,6 @@ body {
           margin-bottom: 20px;
           border-radius: 0 5px 5px 5px;
           padding: 30px 15px;
-
         }
 
         div {
@@ -1476,7 +1496,6 @@ body {
             font-size: 18px;
             padding: 0 0 0 20px;
           }
-
         }
 
         h4 {
@@ -1484,10 +1503,8 @@ body {
           color: #1b8000;
           .block;
           @media all and (min-width: 1200px) {
-
             font-size: 22px;
           }
-
         }
 
         h5 {
@@ -1496,7 +1513,6 @@ body {
           @media all and (min-width: 1200px) {
             .inline-block;
           }
-
         }
 
         p {
@@ -1516,7 +1532,6 @@ body {
             font-size: 25px;
             padding: 0 0 0 10px;
           }
-
         }
       }
 
@@ -1548,7 +1563,6 @@ body {
             font-size: 22px;
             width: 180px;
           }
-
         }
 
         dl {
@@ -1559,7 +1573,6 @@ body {
           .rem(padding, 20 0 0);
           @media all and (min-width: 1200px) {
             border-top: none;
-
             border-left: 1px solid rgba(255,255,255,0.8);
             width: calc(~"100% - 180px");
             padding: 0;
@@ -1629,7 +1642,6 @@ body {
                 &#mail-at {
                   width: 180px;
                 }
-
               }
             }
 
@@ -1650,9 +1662,7 @@ body {
                 border: none;
                 .rem(font-size, 12);
                 @media all and (min-width: 1200px) {
-
                   font-size: 14px;
-
                 }
               }
 
@@ -1663,18 +1673,14 @@ body {
                 .full-position;
                 font-size: 0;
                 .rem(border-radius, 5);
-
                 color: @gray-dark;
                 background: @white;
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 border-left: none;
                 border-top: none;
                 @media all and (min-width: 1200px) {
-
                   margin: 0;
-
                 }
-
               }
 
               i {
@@ -1709,13 +1715,11 @@ body {
               .rem(line-height, 28);
               .top;
               .rem(font-size, 12);
-
               color: @gray-dark;
               @media all and (min-width: 1200px) {
                 height: 40px;
                 line-height: 40px;
               }
-
             }
 
             p.info {
@@ -1730,10 +1734,8 @@ body {
                 line-height: 40px;
                 margin: 0 0 0 10px;
               }
-
             }
           }
-
         }
       }
 
@@ -1800,13 +1802,11 @@ body {
                 color: @white;
                 .bold;
               }
-
             }
           }
         }
 
         div.scroll {
-
           background: @white;
           .rem(padding, 10);
           border: 1px solid @gray;
@@ -1815,7 +1815,6 @@ body {
           @media all and (min-width: 1200px) {
             height: 140px;
           }
-
         }
 
         p.agree {
@@ -1837,10 +1836,8 @@ body {
             &::-ms-expand {
               display: block;
             }
-
           }
         }
-
       }
 
       div.result {
@@ -1897,9 +1894,7 @@ body {
               }
             }
           }
-
         }
-
       }
 
       div.result-info {
@@ -1933,7 +1928,6 @@ body {
           @media all and (min-width: 1200px) {
             font-size: 32px;
           }
-
         }
 
         p.time {
@@ -1943,7 +1937,6 @@ body {
             font-size: 16px;
           }
         }
-
       }
 
       div.result-detail {
@@ -1995,11 +1988,8 @@ body {
               width: calc(~"50% - 170px");
               font-size: 16px;
             }
-
           }
-
         }
-
       }
 
       div.result-time {
@@ -2051,9 +2041,7 @@ body {
               line-height: 30px;
               border-radius: 15px;
             }
-
           }
-
         }
 
         p {
@@ -2069,9 +2057,7 @@ body {
           @media all and (min-width: 1200px) {
             font-size: 18px;
           }
-
         }
-
       }
 
       div.result-price {
@@ -2090,7 +2076,6 @@ body {
           padding: 20px;
           width: 240px;
           min-height: 114px;
-
         }
 
         h4 {
@@ -2103,7 +2088,6 @@ body {
             .block;
             font-size: 20px;
           }
-
         }
 
         p {
@@ -2116,15 +2100,10 @@ body {
             float: none;
             font-size: 26px;
           }
-
         }
-
       }
-
     }
-
   }
-
 }
 
 #discount {
@@ -2159,9 +2138,7 @@ body {
         @media all and (min-width: 1200px) {
           float: none;
           font-size: 26px;
-
         }
-
       }
     }
 
@@ -2180,7 +2157,6 @@ body {
         height: 58px;
         line-height: 58px;
       }
-
     }
 
     div.item {
@@ -2208,7 +2184,6 @@ body {
             font-size: 20px;
             .bold;
           }
-
         }
       }
 
@@ -2230,13 +2205,11 @@ body {
 
           strong {
             .rem(margin, 0 0 0 10);
-
           }
           @media all and (min-width: 1200px) {
             .inline-block;
             margin: 0 20px 0 0;
           }
-
         }
 
         select {
@@ -2255,7 +2228,6 @@ body {
             width: 400px;
             margin: 0;
           }
-
         }
 
         button.select {
@@ -2278,11 +2250,8 @@ body {
             float: right;
             margin: 0;
           }
-
         }
-
       }
-
     }
 
     div.info-text {
@@ -2294,7 +2263,6 @@ body {
       @media all and (min-width: 1200px) {
         font-size: 14px;
       }
-
     }
 
     div.discount-result {
@@ -2326,9 +2294,7 @@ body {
           }
         }
       }
-
     }
-
   }
 }
 
@@ -2368,7 +2334,6 @@ body {
 
         .ui-datepicker-month {
           .rem(font-size, 28);
-
         }
       }
     }
@@ -2386,7 +2351,6 @@ body {
           padding: 20px;
           font-size: 18px;
         }
-
       }
 
       td {
@@ -2423,7 +2387,6 @@ body {
             color: @blue;
           }
         }
-
       }
     }
   }
