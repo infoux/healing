@@ -946,13 +946,11 @@ body {
 
             ul.list {
               .no-list;
-              padding: 0;
-              .rem(margin, 42 0 0);
+              .mapazero;
               height: 0;
               .hidden;
               @media all and (min-width: 1200px) {
                 padding: 0 0 0 180px;
-                margin: 0;
               }
 
               li {
@@ -1080,6 +1078,13 @@ body {
             &.open {
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
               min-height: 62px;
+
+              h4 {
+                .rem(margin-bottom, 42);
+                @media all and (min-width: 1200px) {
+                  margin-bottom: 10px;
+                }
+              }
 
               .legend {
                 .inline-block;
