@@ -821,8 +821,12 @@ body {
               line-height: 55px;
               .center;
 
-              &:first-child {
+              &.first-date {
                 width: 165px;
+              }
+
+              &.first-plan {
+                width: 260px;
               }
 
               &:nth-child(2) {
@@ -940,6 +944,15 @@ body {
                   margin-top: -18px;
                   line-height: 35px;
                   font-size: 18px;
+                }
+              }
+
+              i.badge {
+                top: 0;
+                line-height: 1.4;
+
+                &::before {
+                  top: 0;
                 }
               }
             }
@@ -1082,7 +1095,8 @@ body {
               h4 {
                 .rem(margin-bottom, 42);
                 @media all and (min-width: 1200px) {
-                  margin-bottom: 10px;
+                  margin: 0 0 10px;
+                  .left;
                 }
               }
 
@@ -1127,6 +1141,44 @@ body {
           color: @green;
           .rem(font-size, 14);
           word-break: keep-all;
+        }
+
+        &.plan {
+          @media all and (min-width: 1200px) {
+            ul.table {
+              li {
+                h4 {
+                  width: 260px;
+                }
+
+                ul.list {
+                  padding: 0 0 0 275px;
+
+                  li {
+                    a {
+                      p {
+                        &.date {
+                          width: 30%;
+                        }
+
+                        &.time {
+                          width: 30%;
+                        }
+
+                        &.count {
+                          width: 20%;
+                        }
+
+                        &.select {
+                          width: 20%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
 
