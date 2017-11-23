@@ -799,6 +799,8 @@ body {
         .relative;
         .rem(font-size, 12);
         width: 100%;
+        .rem(padding, 40 15 15);
+
         @media all and (min-width: 1200px) {
           width: 800px;
           margin-right: 20px;
@@ -811,9 +813,10 @@ body {
           .inline-block;
           z-index: 4;
           .absolute;
-          .rem(top, 38);
+          .rem(top, -6);
           .rem(font-size, 16);
           .rem(line-height, 20);
+
           left:0;
           right:0;
           
@@ -947,9 +950,6 @@ body {
             .inline-block;
             .rem(width, 100%);
 
-            .legend {
-              .none;
-            }
 
             h4 {
               .relative;
@@ -1158,7 +1158,6 @@ body {
               min-height: 62px;
 
               h4 {
-                .rem(margin-bottom, 42);
                 @media all and (min-width: 1200px) {
                   margin: 0 0 10px;
                   .left;
