@@ -1269,18 +1269,19 @@ body {
 
             li {
               .inline-block;
-              .rem(padding, 6);
-              width: 50%;
+              .rem(padding, 3);
+              width: calc(100% / 3);
 
               label {
                 .block;
-                .rem(font-size, 12);
+                .rem(font-size, 10);
                 .rem(height, 23);
                 .rem(line-height, 23);
+
                 @media all and (min-width: 1200px) {
-                  font-size: 16px;
-                  height: 46px;
-                  line-height: 46px;
+                  font-size: 13px;
+                  height: 38px;
+                  line-height: 38px;
                 }
               }
 
@@ -1288,8 +1289,10 @@ body {
                 .inline-block;
                 width: 100%;
                 .rem(height, 23);
+                .rem(margin, 0);
+
                 @media all and (min-width: 1200px) {
-                  height: 46px;
+                  height: 42px;
                 }
               }
             }
